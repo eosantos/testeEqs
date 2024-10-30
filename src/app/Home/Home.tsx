@@ -7,21 +7,27 @@ import styled from 'styled-components';
 import H1 from '../components/Typographic/H1';
 import UserDataDisplay from '../components/UserDataDisplay/UserDataDisplay';
 import { fetchUserData, UserData } from '../services/userService';
+import Header from '../components/Header';
 
 const HomeContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background-color: #1b1e23;
   flex-direction: column;
   gap: 20px;
+  padding-top: 100px;
+`;
+
+const HomeDiv = styled.div`
+  height: 100vh;
 `;
 
 const Separator = styled.div`
   background-color: #229322;
-  width: 700px;
+  width: 550px;
   height: 3px;
+  margin-bottom: 3rem;
 `;
 
 const ErrorDiv = styled.p`
@@ -49,17 +55,20 @@ const Home: React.FC = () => {
 
   return (
     <HomeContainer>
-      <H1 size="large" weight="bold" color="primary">
-        Hello World from Next.js
-      </H1>
-      <Separator />
-      {error ? (
-        <ErrorDiv>{error}</ErrorDiv>
-      ) : userData ? (
-        <UserDataDisplay userData={userData} />
-      ) : (
-        <ErrorDiv>Carregando...</ErrorDiv>
-      )}
+      <HomeDiv>
+        <Header logoLink="/" />
+        <H1 size="large" weight="bold" color="primary">
+          Bem vindo a Eqseed
+        </H1>
+        <Separator />
+        {error ? (
+          <ErrorDiv>{error}</ErrorDiv>
+        ) : userData ? (
+          <UserDataDisplay userData={userData} />
+        ) : (
+          <ErrorDiv>Carregando...</ErrorDiv>
+        )}
+      </HomeDiv>
     </HomeContainer>
   );
 };

@@ -1,5 +1,3 @@
-// components/UserDataDisplay/UserDataDisplay.tsx
-
 import React from 'react';
 import styled from 'styled-components';
 import UserDataRow from './UserDataRow';
@@ -17,11 +15,8 @@ interface UserDataDisplayProps {
 
 const UserDataDisplay: React.FC<UserDataDisplayProps> = ({ userData }) => (
   <Sucess>
+    <UserDataRow label="Cliente" value={userData.name} />
     <UserDataRow label="ID" value={userData.uid} />
-    <UserDataRow label="Nome" value={userData.name} />
-    <UserDataRow label="E-mail" value={userData.email} />
-    <UserDataRow label="Telefone" value={userData.phone} />
-    <UserDataRow label="CPF" value={userData.cpf} />
     <UserDataRow label="Tipo de usuário" value={userData.user_type} />
     <UserDataRow
       label="Perfil de investidor"
