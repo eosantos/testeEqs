@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ logoLink }) => {
     <HeaderContainer>
       <Link href={logoLink} passHref>
         <Logo
-          src="https://image.news.eqseed.com/lib/fe32117473640479741776/m/1/eef3f6ec-e43a-46df-93c2-e3fa870d1fe0.png"
+          src="https://portfoliodeagencias.meioemensagem.com.br/anuario/conteudo-img/29099/img1588863326324.jpg"
           alt="Logo"
         />
       </Link>
