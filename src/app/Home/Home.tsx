@@ -33,7 +33,7 @@ const Home: React.FC = () => {
       <HomeDiv>
         <Header logoLink="/" />
         <H1 size="large" weight="bold" color="primary">
-          Bem vindo a Cadastra
+          Bem vindo a Cadastra...
         </H1>
         <Separator />
       </HomeDiv>
